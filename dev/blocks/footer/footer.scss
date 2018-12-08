@@ -1,0 +1,15 @@
+.footer{
+    &__wrapper{
+        height: 50px;
+        display: flex;
+        align-items: center;
+        background: white;
+        justify-content: center;
+        
+        span{
+            font-size: 14px;
+            color: #9d9d9d;
+            font-family: Arial;
+        }
+    }
+}
