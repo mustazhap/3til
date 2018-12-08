@@ -238,7 +238,7 @@ var sd = true;
        
  
     $('.slider').on('change', function () {
-        var as = $(".textsize").attr("rel");
+        var as = $(this).parent(".textsize-pop").parent(".textsize").attr("rel");
         var v = $(this).val();
         $(as).find("textarea").css('font-size', v + 'px')
         // $('span').html(v);
