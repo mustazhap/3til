@@ -631,6 +631,8 @@ mlKeyboard.layouts.es_ES = [
   {}  // Space
 ];
 
+var mlKeyboard = mlKeyboard || {layouts: {}};
+
 mlKeyboard.layouts.kz_KZ = [
   {d: '<', u: '>'},
   {d: '1',u: '¡'},
@@ -674,8 +676,8 @@ mlKeyboard.layouts.kz_KZ = [
   {d: 'ш',u: 'Ш'},
   {d: 'щ',u: 'Щ'},
   {d: 'з',u: 'З'},
-  {d: '´',u: 'º'},
-  {d: '`',u: '¨'},
+  {d: 'х',u: 'Х'},
+  {d: 'ъ',u: 'Ъ'},
   {d: '\'',u: '"'},
   {}, // Caps lock
   {d: 'ф',u: 'Ф'},

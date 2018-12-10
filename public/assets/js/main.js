@@ -46,9 +46,9 @@
    
     // 
     
-    $("#kaz").find("textarea").mlKeyboard({layout: 'kz_KZ',is_hidden: false});
-    $("#rus").find("textarea").mlKeyboard({layout: 'ru_RU',is_hidden: false});
-    $("#eng").find("textarea").mlKeyboard({layout: 'en_US',is_hidden: false});
+    $("#kaz").find("textarea").mlKeyboard({layout: 'es_ES',is_hidden: false});
+    $("#rus").find("textarea").mlKeyboard({layout: 'es_ES',is_hidden: false});
+    $("#eng").find("textarea").mlKeyboard({layout: 'es_ES',is_hidden: false});
 
     $(".ml").hide();
     // Virtual keyboard
