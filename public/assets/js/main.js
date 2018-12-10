@@ -45,9 +45,52 @@
     });
    
     // 
+    
+    $("#kaz").find("textarea").mlKeyboard({layout: 'kz_KZ',is_hidden: false});
+    $("#rus").find("textarea").mlKeyboard({layout: 'ru_RU',is_hidden: false});
+    $("#eng").find("textarea").mlKeyboard({layout: 'en_US',is_hidden: false});
+
+    $(".ml").hide();
+    // Virtual keyboard
+    $('.keyboard').click(function(event){
+        var element = $(this).attr("rel");
+        var el = $(element).find("textarea");
+        $(this).toggleClass("pin-active");
+        console.log(element);
+        switch (element) {
+            case "#kaz":
+                $(".ml").eq(0).show();
+                var or = $(el).val();
+                $(el).val('');
+                $(el).focus().val(or);
+            break;
+            case "#rus":
+                $(".ml").eq(1).show();
+                var or = $(el).val();
+                $(el).val('');
+                $(el).focus().val(or);
+            break;
+            case "#eng":
+                $(".ml").eq(2).show();
+                var or = $(el).val();
+                $(el).val('');
+                $(el).focus().val(or);
+            break;
+        }
+        
+        event.stopPropagation();
+    })
+    // 
+
+    $(".ml").find("ul").click(function(event){
+        event.stopPropagation();
+    });
+
+    
+
 
     // Animation of blocks and pin
-    $(".dict__col").click(function(){
+    $(".dict__col ").click(function(){
         a = $(this).index();
     
         
@@ -63,6 +106,11 @@
             blocks.unshift(a);
             blocks.unshift(b0);
             if($(".dict__col").eq(blocks[2]).hasClass("pinned") || $(".dict__col").eq(blocks[1]).hasClass("pinned")){
+                for (i = 0; i < blocks.length; ++i) {
+                    $(".dict__col").eq(i).removeClass("dict__col-active");
+                    $(this).addClass("dict__col-active");
+                    
+                }
                 return false;
             }
             else{
@@ -86,6 +134,11 @@
                 }
             }
         }if($(".dict__col").eq(blocks[0]).hasClass("pinned") && a === blocks[0]){
+            for (i = 0; i < blocks.length; ++i) {
+                $(".dict__col").eq(i).removeClass("dict__col-active");
+                $(this).addClass("dict__col-active");
+                
+            }
             return false;
         }
         
@@ -97,7 +150,11 @@
             blocks[0] = tem2;
 
             if($(".dict__col").eq(a).hasClass("pinned")){
-
+                for (i = 0; i < blocks.length; ++i) {
+                    $(".dict__col").eq(i).removeClass("dict__col-active");
+                    $(this).addClass("dict__col-active");
+                    
+                }
                 return false;
             }
             else{
@@ -121,6 +178,24 @@
                 }
             }
         }
+        if($(".dict__col").eq(blocks[1]).hasClass("pinned") && a === blocks[1]){
+           
+                for (i = 0; i < blocks.length; ++i) {
+                    $(".dict__col").eq(i).removeClass("dict__col-active");
+                    $(this).addClass("dict__col-active");
+                    
+                }
+               
+        }
+        if($(".dict__col").eq(blocks[2]).hasClass("pinned") && a === blocks[2]){
+           
+            for (i = 0; i < blocks.length; ++i) {
+                $(".dict__col").eq(i).removeClass("dict__col-active");
+                $(this).addClass("dict__col-active");
+                
+            }
+           
+    }
         if($(".dict__col").eq(blocks[2]).hasClass("pinned") && a === blocks[1]){
             var tem = blocks[0];
             var tem2 = blocks[1];
@@ -128,6 +203,10 @@
             blocks[0] = tem2;
 
             if($(".dict__col").eq(a).hasClass("pinned")){
+                for (i = 0; i < blocks.length; ++i) {
+                    $(".dict__col").eq(i).removeClass("dict__col-active");
+                    $(this).addClass("dict__col-active");
+                }
                 return false;
             }
             else{
@@ -195,6 +274,21 @@
         }
     })
 
+    $(".dict__transcript").click(function(event){
+        event.stopPropagation();
+    })
+
+    $(".dict__examples").click(function(event){
+        event.stopPropagation();
+    })
+
+    $("textarea").click(function(event){
+        event.stopPropagation();
+    })
+
+    $(".block__improve").click(function(event){
+        event.stopPropagation();
+    })
     // Кнопка Copy
     $(".copy").click(function(event){
         // Копирование в буфер
@@ -225,22 +319,24 @@
 var sd = true;
     // Кнопка TextSize
     $(".textsize").click(function(event){
-        $(this).toggleClass("pin-active");
-        if(sd){
-        $(this).find(".textsize-pop").show().css("display", "flex");
-        sd = false;
-        }else{
-            $(this).find(".textsize-pop").hide();
-            sd = true;
+        for (i = 0; i < 3; ++i) {
+            $(".textsize").eq(i).find(".textsize-pop").hide();
+            $(".textsize").eq(i).removeClass("pin-active");
         }
+        $(this).toggleClass("pin-active");
+        $(this).find(".textsize-pop").show().css("display", "flex");
+
         event.stopPropagation(); 
     });
        
- 
+    $('.slider').val(parseInt($("textarea").css('font-size')));
+    $(".slider").trigger('change');
     $('.slider').on('change', function () {
-        var as = $(this).parent(".textsize-pop").parent(".textsize").attr("rel");
         var v = $(this).val();
-        $(as).find("textarea").css('font-size', v + 'px')
+        $("textarea").css('font-size', v + 'px')
+        for (i = 0; i < 3; ++i) {
+            $('.slider').eq(i).val(v);
+        }
         // $('span').html(v);
     });
     // 
@@ -266,6 +362,8 @@ var sd = true;
         $("#burger-menu").css("right", "-100%");
         c = true;
         $("body").css("overflow", "auto");
+        $(".ml").hide();
+        $(".keyboard").removeClass("pin-active");
     })
  
     // 

@@ -2,12 +2,17 @@
 
 @import "libs/owl.carousel.css";
 @import "libs/owl.theme.default.css";
+@import "libs/jquery.ml-keyboard.css";
+
 
 .owl-item{
     position: relative;
     
 }
 
+#mlkeyboard{
+    z-index: 99;
+}
 .owl-nav{
     position: absolute;
     top: 22px;
