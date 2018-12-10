@@ -1,6 +1,8 @@
 <section class="contacts section">
     <div class="contacts__wrapper section__wrapper">
-        <div class="contacts__map"></div>
+        <div class="contacts__map">
+                <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afa6eedf71c7291c43aa0006ea7154074b4d01676ee15b2fdd73ed07d55726959&amp;width=100%&amp;height=100%&amp;lang=ru_RU&amp;scroll=false"></script>
+        </div>
         <div class="contacts__side">
             <form action="" class="contacts__form">
                 <label for="" class="contacts__labe">Фамилия Имя</label>
@@ -8,14 +10,43 @@
                 <label for="" class="contacts__labe">E-mail</label>
                 <input type="text" class="input-text" placeholder="example@mail.com">
                 <label for="" class="contacts__labe">Варианты запросов</label>
-                <input type="text" class="input-text" placeholder="Иванов Иван">
+                <div class="select_border">
+                    <select сlass="select ">
+                        <option value="kaz">Сотрудничество</option>
+                        <option value="rus">Сотрудничество 1</option>
+                        <option value="eng">Сотрудничество 2</option>
+                    </select> 
+            </div>
                 <button class="button">
                     Отправить
                 </button>
             </form>
             <div class="contacts__info">
                 <div class="contacts__block">
-                    
+                    <i class="icon-phone"></i>
+                    <div class="contacts__te">
+                        <span>Телефоны</span>
+                        <a href="tel:87272969604">+7 (727) <b>296 95 04</b></a>
+                        <a href="tel:87013201419">+7 (701) <b>320 14 19</b></a>
+                    </div>
+                </div>
+                <div class="contacts__block">
+                    <i class="icon-mail"></i>
+                    <div class="contacts__te">
+                            <span>Email</span>
+                            <a href="mailto:info@3til.kz">info<b>@3til.kz</b></a>
+                        </div>
+                </div>
+
+                <div class="contacts__block">
+                    <i class="icon-marker"></i>
+                    <div class="contacts__te">
+                            <span>Наш адрес</span>
+                            <p>
+                                м-н Самал-1, д.18, оф.4,<br>
+                                напротив ТЦ Достык Плаза
+                            </p>
+                        </div>
                 </div>
             </div>
         </div>

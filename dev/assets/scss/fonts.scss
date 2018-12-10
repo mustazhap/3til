@@ -1,5 +1,7 @@
 
 $SP: 'SF UI Text', sans-serif;
+$ED: 'ED', sans-serif;
+
 
 
 @font-face {
@@ -81,171 +83,71 @@ $SP: 'SF UI Text', sans-serif;
   content: "\e910";
 }
 
-  
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-HeavyItalic.woff') format('woff');
-	font-weight: 300;
-	font-style: italic;
-}
+	
 
 @font-face {
 	font-family: 'SF UI Text';
-	src:
-		url('../fonts/SFUIText-LightItalic.woff') format('woff');
-	font-weight: 300;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-MediumItalic.woff') format('woff');
-	font-weight: 500;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Medium.woff') format('woff');
-	font-weight: 500;
+	src: url('../fonts/SFUIText-Bold.eot');
+	src: local('SF UI Text Bold'), local('SFUIText-Bold'),
+		url('../fonts/SFUIText-Bold.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SFUIText-Bold.woff') format('woff'),
+		url('../fonts/SFUIText-Bold.ttf') format('truetype');
+	font-weight: bold;
 	font-style: normal;
 }
-
 @font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Regular.woff') format('woff');
+	font-family: 'SF UI Text';
+	src: url('../fonts/SFUIDisplay-Regular.eot');
+	src: local('SF UI Display Regular'), local('SFUIDisplay-Regular'),
+		url('../fonts/SFUIDisplay-Regular.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SFUIDisplay-Regular.woff') format('woff'),
+		url('../fonts/SFUIDisplay-Regular.ttf') format('truetype');
 	font-weight: normal;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Light.woff') format('woff');
+	font-family: 'SF UI Text';
+	src: url('../fonts/SFUIDisplay-Light.eot');
+	src: local('SF UI Display Light'), local('SFUIDisplay-Light'),
+		url('../fonts/SFUIDisplay-Light.eot?#iefix') format('embedded-opentype'),
+		url('../fonts/SFUIDisplay-Light.woff') format('woff'),
+		url('../fonts/SFUIDisplay-Light.ttf') format('truetype');
 	font-weight: 300;
 	font-style: normal;
 }
 
+
+// 
 @font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Thin.woff') format('woff');
-	font-weight: 100;
+	font-family: 'ED';
+	src: local('Euclid Flex Regular'), local('SFUIText-Bold');
+	src: url('../fonts/ed/EuclidFlexRegular.otf');
+	font-weight: 400;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Ultralight.woff') format('woff');
-	font-weight: 100;
+	font-family: 'ED';
+	src: local('Euclid Flex Regular'), local('SFUIText-Bold');
+	src: url('../fonts/ed/EuclidFlexBold.otf');
+	font-weight: 700;
 	font-style: normal;
 }
 
 @font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Semibold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Semibold.woff') format('woff');
-	font-weight: 600;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Regular.woff') format('woff');
-	font-weight: normal;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Black.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-BoldItalic.woff') format('woff');
-	font-weight: bold;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Bold.woff') format('woff');
-	font-weight: bold;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Heavy.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Light.woff') format('woff');
-	font-weight: 300;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Heavy.woff') format('woff');
-	font-weight: 900;
-	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Medium.woff') format('woff');
+	font-family: 'ED';
+	src: local('Euclid Flex Medium Regular'), local('SFUIText-Bold');
+	src: url('../fonts/ed/EuclidFlexMediumRegular.otf');
 	font-weight: 500;
 	font-style: normal;
 }
 
+
 @font-face {
-	font-family: 'SF UI Display';
-	src: 
-		url('../fonts/SFUIDisplay-Bold.woff') format('woff');
-	font-weight: bold;
+	font-family: 'ED';
+	src: local('Euclid Flex Medium Regular'), local('SFUIText-Bold');
+	src: url('../fonts/ed/EuclidFlexLightRegular.otf');
+	font-weight: 300;
 	font-style: normal;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-Italic.woff') format('woff');
-	font-weight: normal;
-	font-style: italic;
-}
-
-@font-face {
-	font-family: 'SF UI Text';
-	src: 
-		url('../fonts/SFUIText-SemiboldItalic.woff') format('woff');
-	font-weight: 600;
-	font-style: italic;
 }

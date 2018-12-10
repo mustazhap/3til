@@ -26,7 +26,7 @@
     font-weight: 400;
 }
 
-// 
+// select menu
 
 .select-hidden {
     display: none;
@@ -41,6 +41,19 @@
     color: #747474;
     width: 70px;
     height: 40px;
+  }
+
+  .select_border{
+    width: 100%;
+    .select{
+      width: 100%;
+    }
+    .select-styled{
+      width: 100%;
+      border-radius: 3px;
+      border: 1px solid #c7c7c7;
+      background-color: #ffffff;
+    }
   }
   .select-styled {
     position: absolute; 
@@ -104,6 +117,7 @@
     }
   }
 
+  // input text
   .input-text{
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
     border-radius: 5px;
