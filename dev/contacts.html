@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+	<link rel="stylesheet" href="assets/css/main.css">
+	<script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+
+
+
+	<title>Site Title: Contacts</title>
+
+</head>
+<body>
+
+		<header class="header section header-shadow">
+				<div class="header__wrapper section__wrapper">
+				   <a href="/" class="header__logo">
+						<img src="assets/img/logo.png" alt="Logo">
+					</a>
+					<nav class="header__nav">
+						<a href="/" class="header__nav-item active">Главная</a>
+						<a href="#" class="header__nav-item" rel="#partners">Наши партнеры</a>
+						<a href="#" class="header__nav-item" rel="#about">О проекте</a>
+						<a href="/contacts.html" class="header__nav-item">Контакты</a>
+					</nav>
+					<div class="header__enter header__enter_hide">
+						<select id="lang" class="select">
+							<option value="kaz">қаз</option>
+							<option value="rus">рус</option>
+							<option value="eng">eng</option>
+						</select> 
+						<a href="#!" class="button auth" rel="#login">Войти</a>
+					</div>
+					<div class="burger-wrap">
+						<a class="burger">
+							<span class="line line-1"></span>
+							<span class="line line-2"></span>
+							<span class="line line-3"></span>
+						</a>
+					</div>
+					<div class="burger-menu" id="burger-menu">
+						<div class="burger-col">
+						 <div class="header__enter header__enter_mobile">
+						<a href="#!" class="button auth" rel="#login">Войти</a>
+							<div class="burger-lang">
+								<a href="#!">рус</a>
+								<a href="#!" class="burger-act-lang">қаз</a>
+								<a href="#!">eng</a>
+							</div>
+					   
+						
+					</div>
+						<nav class="burger__nav">
+							<a href="/" class="header__nav-item active">Главная</a>
+							<a href="#" class="header__nav-item" rel="#partners">Наши партнеры</a>
+							<a href="#" class="header__nav-item" rel="#about">О проекте</a>
+							<a href="/contacts.html" class="header__nav-item">Контакты</a>
+						</nav>
+					</div>
+						<div class="burger__footer">
+							<span>
+								Все права защищены <br>ТОО "3 TIL" 2018
+							</span>
+						</div>
+					</div>
+				</div>
+			</header>
+@@include("blocks/contacts/contacts.html")
+@@include("blocks/footer/footer.html")
+@@include("blocks/modals/modals.html")
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script src="assets/js/owl.carousel.min.js"></script>
+<script src="assets/js/jquery.ml-keyboard.js"></script>
+<script type="text/javascript" src="assets/js/main.js"></script>
+
+</body>
+</html>

@@ -65,10 +65,6 @@
             left: 75%;
         }
     }
-}
-
-@media screen and (max-width: 800px){
-    
     .header__nav{
         display: none;
     }
@@ -76,6 +72,17 @@
     .burger-wrap{
         display: block;
     }
+    .burger-lang{
+        display: flex;
+    }
+
+    .header__enter_hide{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 800px){
+
 
     .concordance__line{
         height: auto;

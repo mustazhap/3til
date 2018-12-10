@@ -1,0 +1,14 @@
+.trade{
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.16);
+    margin-bottom: 10px;
+    &__wrapper{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: white;
+        height: 174px;
+        color: #505050;
+        font-size: 35px;
+        font-weight: 400;
+    }
+}

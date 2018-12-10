@@ -18,10 +18,21 @@ html, body{
 
 // import files of blocks [Basic]
 @import "../../blocks/section/section";
+@import "../../blocks/elements/elements";
+@import "../../blocks/modals/modals";
+
+
+
+@import "../../blocks/header/header";
 
 // Index
-@import "../../blocks/header/header";
 @import "../../blocks/dict/dict";
+
+@import "../../blocks/trade/trade";
+
+
+// Contacts
+@import "../../blocks/contacts/contacts";
 
 
 // Footer :)

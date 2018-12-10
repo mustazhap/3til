@@ -24,11 +24,19 @@
             <img src="assets/img/logo.png" alt="Logo">
         </a>
         <nav class="header__nav">
-            <a href="#" class="header__nav-item active">Главная</a>
-            <a href="#" class="header__nav-item">Наши партнеры</a>
-            <a href="#" class="header__nav-item">О проекте</a>
-            <a href="#" class="header__nav-item">Контакты</a>
+            <a href="/" class="header__nav-item active">Главная</a>
+            <a href="#" class="header__nav-item" rel="#partners">Наши партнеры</a>
+            <a href="#" class="header__nav-item" rel="#about">О проекте</a>
+            <a href="/contacts.html" class="header__nav-item">Контакты</a>
         </nav>
+        <div class="header__enter header__enter_hide">
+            <select id="lang" class="select">
+                <option value="kaz">қаз</option>
+                <option value="rus">рус</option>
+                <option value="eng">eng</option>
+            </select> 
+            <a href="#!" class="button auth" rel="#login">Войти</a>
+        </div>
         <div class="burger-wrap">
             <a class="burger">
                 <span class="line line-1"></span>
@@ -37,12 +45,24 @@
             </a>
         </div>
         <div class="burger-menu" id="burger-menu">
+            <div class="burger-col">
+             <div class="header__enter header__enter_mobile">
+            <a href="#!" class="button auth" rel="#login">Войти</a>
+                <div class="burger-lang">
+                    <a href="#!">рус</a>
+                    <a href="#!" class="burger-act-lang">қаз</a>
+                    <a href="#!">eng</a>
+                </div>
+           
+            
+        </div>
             <nav class="burger__nav">
-                <a href="#" class="header__nav-item active">Главная</a>
-                <a href="#" class="header__nav-item">Наши партнеры</a>
-                <a href="#" class="header__nav-item">О проекте</a>
-                <a href="#" class="header__nav-item">Контакты</a>
+                <a href="/" class="header__nav-item active">Главная</a>
+                <a href="#" class="header__nav-item" rel="#partners">Наши партнеры</a>
+                <a href="#" class="header__nav-item" rel="#about">О проекте</a>
+                <a href="/contacts.html" class="header__nav-item">Контакты</a>
             </nav>
+        </div>
             <div class="burger__footer">
                 <span>
                     Все права защищены <br>ТОО "3 TIL" 2018
@@ -67,7 +87,7 @@
                     </div>
                     <div class="block__bottom">
                         <div class="block__left">
-                            <a href="#!" class="copy" rel="#kaz">
+                            <a class="copy" rel="#kaz">
                                 <div class="copy-message">
                                     <span>Көшірілді</span>
                                 </div>
@@ -123,7 +143,7 @@
                         </div>
                         <div class="block__bottom">
                             <div class="block__left">
-                                <a href="#!" class="copy" rel="#rus">
+                                <a class="copy" rel="#rus">
                                 <div class="copy-message">
                                     <span>Скопировано</span>
                                 </div>
@@ -176,12 +196,12 @@
                 <div class="block">
                     <textarea name="" cols="30" rows="10"  class="block__input" >Apple</textarea>
                     <div class="block__row">
-                        <a href="#!" class="block__improve">IMPROVE THE TRANSLATION</a>
+                        <a href="#!" class="block__improve">Suggest your TRANSLATION</a>
                         <span class="block__lang">Eng</span>
                     </div>
                     <div class="block__bottom">
                         <div class="block__left">
-                           <a href="#!" class="copy" rel="#eng">
+                           <a class="copy" rel="#eng">
                                 <div class="copy-message">
                                     <span>Copied</span>
                                 </div>
@@ -299,11 +319,98 @@
     
 </div>
     </section>
+    
+<section class="trade section">
+    <div class="trade__wrapper section__wrapper">
+        <span>Место для вашей рекламы</span>
+    </div>
+</section>
 <footer class="footer section">
     <div class="footer__wrapper section__wrapper">
         <span>Все права защищены ТОО "3 TIL" 2018</span>
     </div>
 </footer>
+<div class="modal" id="about">
+        <div class="modal__block">
+            <a href="#!" class="modal__close"><i class="icon-close"></i></a>
+            <h3 class="modal__title">Онлайн трехъязычный корпусный словарь 3til.kz </h3>
+            <p class="modal__text">Настоящий словарь включает 330 000 слов и использует достоверные термины, утвержденные для использования в отраслевом контекста. 
+                    Продукт ориентирован на широкий круг пользователей: преподаватели, студенты, учителя и учащиеся школ, переводчики, переводческие агентства/бюро, сотрудники государственных органов РК, лингвисты, журналисты и др.</h3>
+            </p>
+            <a href="/" class="modal__logo"><img src="assets/img/logo.png" alt="logo"></a>
+    </div>
+</div>
+
+<div class="modal" id="partners">
+        <div class="modal__block">
+            <a href="#!" class="modal__close"><i class="icon-close"></i></a>
+            
+            <p class="modal__text"><b>Настоящий проект был разработан лингвистами для выполнения точных переводов искомых слов.</b> <br><br>
+
+                    Следующие компании/частные лица внесли свой вклад в развитие проекта: </p>
+            <div class="modal__row">
+                <div class="modal__partner">
+                    <span><b>Александр Мажор</b></span>
+                    <span>программист-разработчик</span>
+                </div>
+                <div class="modal__partner">
+                    <span><b>Расул Машуров</b></span>
+                    <span>веб-разработчик</span>
+                </div>
+                <div class="modal__partner">
+                    <span><b>Индира Серикбай</b></span>
+                    <span>управление данными</span>
+                </div>
+                <div class="modal__partner">  
+                    <span><b>Ильяс Садуов</b></span>
+                    <span>компьютерный лингвист</span>
+                </div>
+                <div class="modal__partner">   
+                    <span><b>Жандос Жуманов</b></span>
+                    <span>внешний консультант</span>
+                </div>
+                <div class="modal__partner">
+                    <span><b>Рамиль Биктимиров</b></span>
+                    <span>IT-специалист</span>
+                </div>
+            </div>
+    </div>
+</div>
+
+<div class="modal mk" id="login">
+        <div class="modal__block">
+            <a href="#!" class="modal__close mclose"><i class="icon-close"></i></a>
+        <input type="text" class="input-text" placeholder="Логин">
+        <input type="text" class="input-text" placeholder="Пароль">
+        <button class="button">ВОЙТИ</button>
+        <a href="#!" class="modal__forgot">Забыли Пароль ?</a>
+        <div class="modal__line"></div>
+        <div class="modal__bottom">
+            <span>У вас нету аккаунта?</span>
+            <a href="#!" class="auth" rel="#register">Регистрация</a>
+        </div>
+    </div>
+</div>
+
+<div class="modal mk" id="register">
+        <div class="modal__block">
+            <a href="#!" class="modal__close mclose"><i class="icon-close"></i></a>
+        <input type="text" class="input-text" placeholder="Логин">
+        <input type="text" class="input-text" placeholder="Пароль">
+        <input type="text" class="input-text" placeholder="Поле">
+        <input type="text" class="input-text" placeholder="Поле2">
+        <input type="text" class="input-text" placeholder="Поле3">
+
+        <button class="button">Зарегистрироваться</button>
+        
+        <div class="modal__line"></div>
+        <div class="modal__bottom">
+            <span>Есть аккаунт?</span>
+            <a href="#!" class="auth" rel="#login">Вход</a>
+        </div>
+    </div>
+</div>
+
 
 
 

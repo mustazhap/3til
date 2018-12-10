@@ -46,31 +46,45 @@
    
     // 
     
-    $("#kaz").find("textarea").mlKeyboard({layout: 'es_ES',is_hidden: false});
-    $("#rus").find("textarea").mlKeyboard({layout: 'es_ES',is_hidden: false});
-    $("#eng").find("textarea").mlKeyboard({layout: 'es_ES',is_hidden: false});
+    $("#kaz").find("textarea").mlKeyboard({layout: 'kz_KZ',is_hidden: false});
+    $("#rus").find("textarea").mlKeyboard({layout: 'ru_RU',is_hidden: false});
+    $("#eng").find("textarea").mlKeyboard({layout: 'en_US',is_hidden: false});
 
     $(".ml").hide();
     // Virtual keyboard
+    var ak = 0;
+    
     $('.keyboard').click(function(event){
         var element = $(this).attr("rel");
+        var $this = $(this);
+        $('.keyboard').removeClass("pin-active")
+        if(ak === 0){
+            $this.addClass("pin-active");
+            ak = 1;
+        }
+        else{
+            ak = 0;
+        }
         var el = $(element).find("textarea");
         $(this).toggleClass("pin-active");
         console.log(element);
         switch (element) {
             case "#kaz":
+                $(".ml").hide();
                 $(".ml").eq(0).show();
                 var or = $(el).val();
                 $(el).val('');
                 $(el).focus().val(or);
             break;
             case "#rus":
+                $(".ml").hide();
                 $(".ml").eq(1).show();
                 var or = $(el).val();
                 $(el).val('');
                 $(el).focus().val(or);
             break;
             case "#eng":
+                $(".ml").hide();
                 $(".ml").eq(2).show();
                 var or = $(el).val();
                 $(el).val('');
@@ -387,4 +401,89 @@ var sd = true;
     // 
 
 
+    // Select menu
+    $('select').each(function(){
+        var $this = $(this), numberOfOptions = $(this).children('option').length;
+      
+        $this.addClass('select-hidden'); 
+        $this.wrap('<div class="select"></div>');
+        $this.after('<div class="select-styled"></div>');
+    
+        var $styledSelect = $this.next('div.select-styled');
+        $styledSelect.text($this.children('option').eq(0).text());
+      
+        var $list = $('<ul />', {
+            'class': 'select-options'
+        }).insertAfter($styledSelect);
+      
+        for (var i = 0; i < numberOfOptions; i++) {
+            $('<li />', {
+                text: $this.children('option').eq(i).text(),
+                rel: $this.children('option').eq(i).val()
+            }).appendTo($list);
+        }
+      
+        var $listItems = $list.children('li');
+      
+        $styledSelect.click(function(e) {
+            e.stopPropagation();
+            $('div.select-styled.active').not(this).each(function(){
+                $(this).removeClass('active').next('ul.select-options').hide();
+            });
+            $(this).toggleClass('active').next('ul.select-options').toggle();
+        });
+      
+        $listItems.click(function(e) {
+            e.stopPropagation();
+            $styledSelect.text($(this).text()).removeClass('active');
+            $this.val($(this).attr('rel'));
+            $list.hide();
+            //console.log($this.val());
+        });
+      
+        $(document).click(function() {
+            $styledSelect.removeClass('active');
+            $list.hide();
+        });
+    
+    });
+
 });
+
+// Modals
+
+$(".modal__close").click(function(){
+    $("body").removeClass("body_modal");
+    $(".modal").addClass("out");
+})
+
+$(".header__nav-item").click(function(){
+    var modalID = $(this).attr("rel");    
+    $(modalID).removeClass("out").addClass("one");
+    $("body").addClass("body_modal");
+})
+
+
+
+$(".modal").click(function(){
+    $(this).addClass("out");
+    $("body").removeClass("body_modal");
+})
+
+$(".modal__block").click(function(event){
+    event.stopPropagation();   
+})
+
+$(".auth").click(function(){
+    var modalID = $(this).attr("rel");    
+    $(modalID).show().css("display","flex");
+    console.log(3);
+})
+
+$(".mclose").click(function(){
+    $(".mk").hide();
+})
+
+$(".mk").click(function(){
+    $(this).hide();
+})

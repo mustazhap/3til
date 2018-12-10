@@ -5,11 +5,19 @@
             <img src="assets/img/logo.png" alt="Logo">
         </a>
         <nav class="header__nav">
-            <a href="#" class="header__nav-item active">Главная</a>
-            <a href="#" class="header__nav-item">Наши партнеры</a>
-            <a href="#" class="header__nav-item">О проекте</a>
-            <a href="#" class="header__nav-item">Контакты</a>
+            <a href="/" class="header__nav-item active">Главная</a>
+            <a href="#" class="header__nav-item" rel="#partners">Наши партнеры</a>
+            <a href="#" class="header__nav-item" rel="#about">О проекте</a>
+            <a href="/contacts.html" class="header__nav-item">Контакты</a>
         </nav>
+        <div class="header__enter header__enter_hide">
+            <select id="lang" class="select">
+                <option value="kaz">қаз</option>
+                <option value="rus">рус</option>
+                <option value="eng">eng</option>
+            </select> 
+            <a href="#!" class="button auth" rel="#login">Войти</a>
+        </div>
         <div class="burger-wrap">
             <a class="burger">
                 <span class="line line-1"></span>
@@ -18,12 +26,24 @@
             </a>
         </div>
         <div class="burger-menu" id="burger-menu">
+            <div class="burger-col">
+             <div class="header__enter header__enter_mobile">
+            <a href="#!" class="button auth" rel="#login">Войти</a>
+                <div class="burger-lang">
+                    <a href="#!">рус</a>
+                    <a href="#!" class="burger-act-lang">қаз</a>
+                    <a href="#!">eng</a>
+                </div>
+           
+            
+        </div>
             <nav class="burger__nav">
-                <a href="#" class="header__nav-item active">Главная</a>
-                <a href="#" class="header__nav-item">Наши партнеры</a>
-                <a href="#" class="header__nav-item">О проекте</a>
-                <a href="#" class="header__nav-item">Контакты</a>
+                <a href="/" class="header__nav-item active">Главная</a>
+                <a href="#" class="header__nav-item" rel="#partners">Наши партнеры</a>
+                <a href="#" class="header__nav-item" rel="#about">О проекте</a>
+                <a href="/contacts.html" class="header__nav-item">Контакты</a>
             </nav>
+        </div>
             <div class="burger__footer">
                 <span>
                     Все права защищены <br>ТОО "3 TIL" 2018

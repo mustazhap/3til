@@ -1,0 +1,128 @@
+// Elements
+
+.button{
+    height: 41px;
+    border-radius: 5px;
+    background-color: #ff8d7b;
+    color: #ffffff;
+    font-size: 16px;
+    border: none;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    justify-content: center;
+    &:focus, &:active{
+      outline: none; 
+    }
+}
+
+.select{
+    color: #505050;
+    font-size: 16px;
+    letter-spacing: 0.4px;
+    font-weight: 400;
+}
+
+// 
+
+.select-hidden {
+    display: none;
+    visibility: hidden;
+    padding-right: 10px;
+  }
+  .select {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    font-size: 16px;
+    color: #747474;
+    width: 70px;
+    height: 40px;
+  }
+  .select-styled {
+    position: absolute; 
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparent;
+    padding: 8px 15px;
+    transition: all 0.2s ease-in;
+   
+    background-color: #ffffff;
+    &:after {
+      content:"";
+      width: 0;
+      height: 0;
+      border: 5px solid transparent;
+      border-color: #505050 transparent transparent transparent;
+      position: absolute;
+      top: 16px;
+      right: 10px;
+    }
+    &:hover {
+    }
+    &:active, &.active {
+      &:after {
+        top: 9px;
+        border-color: transparent transparent #505050 transparent;
+      }
+    }
+  }
+  
+  .select-options {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    z-index: 999;
+    margin: 0;
+    border-radius: 5px;
+    padding: 0;
+    list-style: none;
+    background-color: white;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.08);
+    border-radius: 3px;
+    border: 1px solid #e3e3e3;
+    li {
+      margin: 0;
+      padding: 12px 0;
+      text-indent: 15px;
+      
+      transition: (all 0.15s ease-in);
+      &:hover {
+        color: white;
+        background: #2d9ae3;
+      }
+      &[rel="hide"] {
+        display: none;
+      }
+    }
+  }
+
+  .input-text{
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.16);
+    border-radius: 5px;
+    background-color: #ffffff;
+    height: 58px;
+    width: 100%;
+    border: none;
+    margin-bottom: 5px;
+    text-indent: 20px;
+    font-family: Ubuntu;
+    font-size: 14px;
+    color: #505050;
+    font-weight: 300;
+
+    &:placeholder{
+    color: #a2a2a2;
+    }
+
+    &:focus, &:active{
+      outline: none;
+    }
+  }
