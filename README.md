@@ -1,6 +1,6 @@
 # front of 3 language dictionary
 
-front: Mustazhap Rustem 
+front: Mustazhap Rustem   
 demo: http://mustazhap.h1n.ru/†hree/ru
 
 #to do:
