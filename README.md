@@ -1,7 +1,7 @@
 # front of 3 language dictionary
 
 front: Mustazhap Rustem 
-
+demo: http://mustazhap.h1n.ru/†hree/ru
 
 #to do:
 1. [x] Адаптивная под все устройства и ОС верстка
